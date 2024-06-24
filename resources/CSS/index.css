@@ -1,0 +1,72 @@
+/* .header {
+    font-family: 'Garamond', serif;
+    text-align: center;
+} */
+
+
+/* header animated text part */
+.header {
+    display: flex;
+    align-items: center;
+    padding-left: 715px;
+}
+
+.container {
+    margin-top: 50px;
+    height: auto;
+    align-items: center;
+}
+
+.textappear {
+    padding: 20px 30px;
+    background: #f5f5f5;
+    font-size: 35px;
+    font-family: monospace;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.textappear p {
+    margin: 0px;
+    white-space: nowrap;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    animation:
+        typing 3s steps(22, end) forwards, blink 1s infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0%
+    }
+
+    100% {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        border-right: 2px solid transparent;
+    }
+
+    50% {
+        border-right: 2px solid #222;
+    }
+}
+
+
+
+/* milk mocha bear img */
+.bearimg {
+    text-align: center;
+    padding-left: 50px;
+}
+
+.paragraph {
+    margin-top: auto;
+    text-align: center;
+    padding-left: 50px;
+}
