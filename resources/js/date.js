@@ -1,15 +1,35 @@
-const startDate = new Date('2022-07-09T02:24:00'); // Replace this with your start date
+const startDate = new Date('2022-07-09T02:24:00'); // Start date and time
 
 function updateTimer() {
     const now = new Date();
-    const duration = now - startDate;
+    let years = now.getFullYear() - startDate.getFullYear();
+    let months = now.getMonth() - startDate.getMonth();
+    let days = now.getDate() - startDate.getDate();
+    let hours = now.getHours() - startDate.getHours();
+    let minutes = now.getMinutes() - startDate.getMinutes();
+    let seconds = now.getSeconds() - startDate.getSeconds();
 
-    const years = Math.floor(duration / (1000 * 60 * 60 * 24 * 365));
-    const months = Math.floor((duration % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
-    const days = Math.floor((duration % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((duration % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((duration % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((duration % (1000 * 60)) / 1000);
+    if (seconds < 0) {
+        seconds += 60;
+        minutes--;
+    }
+    if (minutes < 0) {
+        minutes += 60;
+        hours--;
+    }
+    if (hours < 0) {
+        hours += 24;
+        days--;
+    }
+    if (days < 0) {
+        const monthDays = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+        days += monthDays;
+        months--;
+    }
+    if (months < 0) {
+        months += 12;
+        years--;
+    }
 
     document.getElementById('years').textContent = years;
     document.getElementById('months').textContent = months;

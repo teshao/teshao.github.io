@@ -1,26 +1,209 @@
+/* Count-up timer  */
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     height: 100vh;
     background-color: #f5f5f5;
     margin: 0;
     padding-top: 30px;
+    color: white;
 }
 
 .container {
     text-align: center;
-    background-color: #fff;
-    padding: 20px;
+    background-color: #edc4c8;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
 }
 
 #timer {
     font-size: 1.5em;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Valentines Greeting Card */
+:root {
+    --border-color: rgb(255, 193, 203);
+    --background: white;
+    --front-bg: white;
+    --front-bg-darken: rgb(112, 177, 193);
+    --shadow: rgba(0, 0, 0, 0.1);
+    --drop-shadow: rgba(0, 0, 0, 0.5);
+    --text: #331717;
+}
+
+.card {
+    position: relative;
+    width: 425px;
+    height: 300px;
+    border: 10px solid var(--border-color);
+    box-shadow: inset 10px 0px 15px 0px var(--shadow);
+    background-color: var(--background);
+    margin-top: 350px;
+}
+
+.card .textContainer {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+
+.card .textContainer #header {
+    font-size: 1.5rem;
+    margin: 60px auto;
+}
+
+.card p {
+    font-family: 'Roboto';
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: var(--text);
+    font-style: italic;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.card .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: -10px 0px 0px -10px;
+    border: 10px solid var(--border-color);
+    backface-visibility: hidden;
+    background-color: var(--front-bg);
+    background-size: contain;
+    transform-style: preserve-3d;
+    transform-origin: 50% 0%;
+    transform: perspective(800px) rotateX(0deg);
+    transition: all 0.8s ease-in-out;
+}
+
+.card:hover .front {
+    transform: perspective(800px) rotateX(170deg);
+}
+
+.card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 10px solid var(--border-color);
+    margin: -10px 0px 0px -10px;
+    backface-visibility: visible;
+    filter: drop-shadow(2px 2px 4px var(--drop-shadow));
+    transform-style: preserve-3d;
+    transform-origin: 50% 0%;
+    transform: perspective(800px) rotateX(0deg);
+    transition: all 0.8s ease-in-out;
+    background-color: var(--background);
+    box-shadow: 0 0 0 0 var(--shadow);
+}
+
+.card:hover .back {
+    transform: perspective(800px) rotateX(170deg);
+    box-shadow: 0px 5px 10px 0px var(--shadow), inset 2px 0px 15px 0px var(--shadow);
+}
+
+.heart-container {
+    position: relative;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+}
+
+.heart-1 {
+    position: absolute;
+    background-color: red;
+    filter: drop-shadow(0px 0px 5px var(--drop-shadow));
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    transform: rotate(-45deg);
+}
+
+.heart-1:before,
+.heart-1:after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.heart-1:before {
+    top: -50px
+}
+
+.heart-1:after {
+    left: 50px;
+}
+
+.heart-2 {
+    position: absolute;
+    background-color: rgb(255, 0, 85);
+    filter: drop-shadow(0px 0px 5px var(--drop-shadow));
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+    transform: rotate(-45deg);
+    top: 25px;
+    left: 11px;
+}
+
+.heart-2:before,
+.heart-2:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 0, 85);
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+.heart-2:before {
+    top: -40px
+}
+
+.heart-2:after {
+    left: 40px;
+}
+
+.heart-3 {
+    position: absolute;
+    background-color: rgb(255, 60, 125);
+    filter: drop-shadow(0px 0px 5px var(--drop-shadow));
+    height: 60px;
+    width: 60px;
+    margin: 0 auto;
+    transform: rotate(-45deg);
+    top: 49px;
+    left: 21px;
+}
+
+.heart-3:before,
+.heart-3:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 60, 125);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+
+.heart-3:before {
+    top: -30px
+}
+
+.heart-3:after {
+    left: 30px;
 }
