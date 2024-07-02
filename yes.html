@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -10,7 +9,7 @@
 </head>
 
 <body>
-
+    <!-- Date Counter -->
     <div class="container">
         <h1>We've been dating for:</h1>
         <div id="timer">
@@ -23,8 +22,43 @@
         </div>
     </div>
 
+    <!-- Heart Card Structure -->
     <div class="card">
-        <div class="back"></div>
+        <div class="back">
+            <div class="carousel">
+                <div class="carousel__items">
+                    <img src="./resources/images/IMG_0615.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_1128.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_1443.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_1800.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_2200.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_2310.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_2381.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_2410.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_2514.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_2738.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_7925.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_8418.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_8831.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_9699.jpg" alt=" " class="carousel__img">
+                    <!-- Duplicate images for seamless looping -->
+                    <img src="./resources/images/IMG_0615.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_1128.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_1443.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_1800.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_2200.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_2310.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_2381.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_2410.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_2514.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_2738.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_7925.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_8418.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_8831.jpg" alt=" " class="carousel__img">
+                    <img src="./resources/images/IMG_9699.jpg" alt=" " class="carousel__img">
+                </div>
+            </div>
+        </div>
         <div class="front">
             <div class="heart-container">
                 <div class="heart-1"></div>
@@ -32,15 +66,24 @@
                 <div class="heart-3"></div>
             </div>
         </div>
-
         <div class="textContainer">
             <p id="header">Holder</p>
             <p>Holder rwaisda sadokprw nfsaf ewingd sdk</p>
         </div>
     </div>
 
-    <script src="./resources/js/date.js"></script>
+    <!-- Buttons at the bottom of the page -->
+    <div class="buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">More Surprises</button>
+    </div>
+    <script>
+        function nextPage() {
+            window.location.href = "flowers.html";
+        }
+    </script>
 
+    <!-- Date Script -->
+    <script src="./resources/js/date.js"></script>
 </body>
 
 </html>
