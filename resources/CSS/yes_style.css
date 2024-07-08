@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Garamond;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -53,8 +53,10 @@ h1 {
 
 .card .textContainer {
     width: 80%;
-    height: 80%;
+    height: 300px;
+    /* Adjusted height to account for padding */
     margin: auto;
+    overflow: auto;
 }
 
 .card .textContainer #header {
@@ -63,13 +65,16 @@ h1 {
 }
 
 .card p {
-    font-family: 'Roboto';
-    font-size: 1.1rem;
-    line-height: 1.4;
+    font-family: Garamond;
+    font-size: 1.0rem;
+    /* Reduced font size */
+    line-height: 1.2;
+    /* Adjusted line height */
     color: var(--text);
     font-style: italic;
     text-align: center;
-    margin: 30px auto;
+    margin: 20px auto;
+    overflow-wrap: break-word;
 }
 
 .card .front {
@@ -218,24 +223,19 @@ h1 {
     border: none;
     border-radius: 12px;
     transition: background-color 0.3s ease;
+    font-family: Garamond;
 }
 
-.button-text {
-    font-family: 'Garamond';
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 0;
+#yesButton:hover {
+    background-color: #f5b5bb;
 }
+
 
 .buttons {
     display: flex;
     justify-content: center;
     margin-top: 35px;
 }
-
-
 
 .carousel {
     width: 100%;
@@ -247,7 +247,7 @@ h1 {
 
 .carousel__items {
     display: flex;
-    animation: carousel 16s linear infinite;
+    animation: carousel 20s linear infinite;
 }
 
 .carousel__img {
